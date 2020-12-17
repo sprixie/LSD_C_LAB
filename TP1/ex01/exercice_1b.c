@@ -14,7 +14,7 @@ float *remontee(float A[N][N], float B[N], int n)
     for(int j = i + 1; j <= n - 1 ; j++)
       s += A[i][j] * X[j];
     X[i] = (B[i] - s) / A[i][i];
-  }                                                                                                                                                                                                             20   return X; 
+  }
   return X;
 }
 
