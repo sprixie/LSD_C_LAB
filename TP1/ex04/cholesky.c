@@ -90,7 +90,7 @@ int main()
 
 	for(int i = n-2; i >= 0; i--){
 		float sum2=0;
-		for(int j = i; j < n; j++){
+		for(int j = i+1; j < n; j++){
 			sum2 += C[j][i] * X[j];
 	  }
 		X[i] = (Y[i]-sum2)/C[i][i];
