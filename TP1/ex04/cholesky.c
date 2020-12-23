@@ -4,8 +4,7 @@
 #define N 10
 
 float cholesky(float C[N][N], float A[N][N],int n)
-{
-	//cholesky algorithm		
+{	
 	for(int j = 0; j < n; j++){
 		for(int i = j; i < n; i++){
 			if(i == j)
@@ -47,7 +46,7 @@ int main()
 		}
 
 
-	//implementation of the C matrix 
+	//Here we are implementing the C matrix
 	for(int i = 0; i < n; i++)
   {
 		for(int j = 0; j < n; j++){
@@ -57,7 +56,7 @@ int main()
 	
 	
 	
-	//find the resulting cholesky matrix
+	//Le3ts find the resulting cholesky matrix
 	C[N][N]=cholesky(C, A, n);
   
 	//printing  C
@@ -70,7 +69,7 @@ int main()
 		printf("\n");
 	}
 	
-	//solve c(Transose)*y=b
+	//solving C(Transpose)*Y=B
 	Y[0] = B[0] / C[0][0];
 	for(int i = 1; i < n; i++){
 		float sum1=0;
@@ -85,7 +84,7 @@ int main()
 		printf("Y[%d]=%f\t",i, Y[i]);
 	}
 	
-	//sovle c*x=y
+	//solving c*x=y
 	X[n-1] = Y[n-1]/C[n-1][n-1];
 
 	for(int i = n-2; i >= 0; i--){
